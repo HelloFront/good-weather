@@ -9,7 +9,7 @@ const renderWeather = (obj) => {
         const day = new Date();
         const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         const mainBlock = document.querySelector('main');
-        
+
         mainBlock.innerHTML = ''
         mainBlock.insertAdjacentHTML('beforeend', `
         <div class="main-top-block">
@@ -19,7 +19,7 @@ const renderWeather = (obj) => {
             <div class="top-left-bottom-block">
                 <div class="left-side">
                     <img class="weather-img" src="img/${obj.weather[0].icon}.svg" alt="weather">
-                    <span class="out-wind">Speed: ${(obj.wind.speed).toFixed(1)} km/h</span>
+                    <span class="out-wind">Speed: ${(obj.wind.speed).toFixed(1)} m/s</span>
                 </div>
                 <div class="right-side">
                     <p class="out-date">${days[day.getDay()]}</p>
@@ -45,7 +45,7 @@ const renderWeather = (obj) => {
                     <p class="out-temperature">${(obj.main.temp - 273.15).toFixed(1)}&deg;C</p>
                     <p class="out-feels-like">${(obj.main.feels_like - 273.15).toFixed(1)}&deg;C</p>
                     <p class="out-clouds-cover">${obj.clouds.all}%</p>
-                    <p class="out-pressure">${obj.main.pressure}mm</p>
+                    <p class="out-pressure">${(obj.main.pressure/1.333).toFixed()}mm</p>
                 </div>
             </div>
         </div>
