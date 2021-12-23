@@ -87,6 +87,14 @@ body .container main {
   margin: 10px 0 0;
   width: 100%;
 }
+body .container main .spinner {
+  width: 50%;
+  display: block;
+  margin: 30px auto;
+  padding-bottom: 100%;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
 body .container main .main-top-block {
   padding-bottom: 100%;
   width: 100%;
