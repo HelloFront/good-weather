@@ -91,7 +91,7 @@ body .container main .spinner {
   width: 50%;
   display: block;
   margin: 12% auto;
-  padding-bottom: 1000px;
+  padding-bottom: 2000px;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
