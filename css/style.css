@@ -90,8 +90,8 @@ body .container main {
 body .container main .spinner {
   width: 50%;
   display: block;
-  margin: 30px auto;
-  padding-bottom: 100%;
+  margin: 12% auto;
+  padding-bottom: 1000px;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
@@ -120,7 +120,7 @@ body .container main .main-top-block .item {
   border-radius: 4px;
   background-color: rgba(5, 141, 134, 0.178);
   width: 45%;
-  min-height: 240px;
+  min-height: 250px;
 }
 body .container main .main-top-block .item hr {
   margin: 7px 0;
