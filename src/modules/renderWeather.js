@@ -6,10 +6,10 @@ const renderWeather = (obj) => {
     } else render(obj)
 
     function render (obj) {
-        console.log(obj);
         const day = new Date();
         const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         const mainBlock = document.querySelector('main');
+        
         mainBlock.innerHTML = ''
         mainBlock.insertAdjacentHTML('beforeend', `
         <div class="main-top-block">

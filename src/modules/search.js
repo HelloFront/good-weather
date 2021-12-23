@@ -17,7 +17,7 @@ const search = () => {
         let value = input.value;
         input.value = '';
 
-        getData(value).then(json => renderWeather(json))
+        if(value) getData(value).then(json => renderWeather(json))
     })
 }
 

@@ -6,7 +6,6 @@
 }
 
 body {
-  height: 100vh;
   overflow: hidden;
   font-family: 'Lato', sans-serif;
   color: #fff;
@@ -14,14 +13,18 @@ body {
   background: linear-gradient(to bottom right, blue, 20%, #13e7dc);
   background-repeat: no-repeat;
 }
-body .container {
-  width: 50%;
-  margin: 10% auto;
-}
-body .container header h1 {
+body h1 {
+  margin-top: 100px;
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
+  background-color: #1f6eff;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+}
+body .container {
+  width: 50%;
+  margin: 5% auto;
 }
 body .container header .btns {
   margin: 20px 0 10px;
@@ -85,6 +88,7 @@ body .container main {
   width: 100%;
 }
 body .container main .main-top-block {
+  padding-bottom: 100%;
   width: 100%;
   min-height: 270px;
   display: -webkit-box;
@@ -108,7 +112,7 @@ body .container main .main-top-block .item {
   border-radius: 4px;
   background-color: rgba(5, 141, 134, 0.178);
   width: 45%;
-  min-height: 270px;
+  min-height: 240px;
 }
 body .container main .main-top-block .item hr {
   margin: 7px 0;
