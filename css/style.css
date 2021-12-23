@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+  background: -webkit-gradient(linear, left top, right bottom, from(blue), color-stop(20%), to(#13e7dc));
+  background: linear-gradient(to bottom right, blue, 20%, #13e7dc);
+  background-repeat: no-repeat;
+}
+body .container {
+  width: 50%;
+  margin: 10% auto;
+}
+body .container header h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+}
+body .container header .btns {
+  margin: 20px 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+body .container header .btns button {
+  margin: 0 5px;
+  width: 150px;
+  height: 30px;
+  color: #1d1d1d;
+  background-color: rgba(5, 141, 134, 0.452);
+  border: 1px solid black;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+body .container header .btns button:hover {
+  border: 1px solid white;
+}
+body .container main {
+  margin: 50px 0 0;
+  width: 100%;
+}
+body .container main .main-top-block {
+  width: 100%;
+  min-height: 270px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+body .container main .main-top-block .item {
+  padding: 20px 15px;
+  border: 1px solid #5f5f5f;
+  border-radius: 4px;
+  background-color: rgba(5, 141, 134, 0.178);
+  width: 45%;
+  min-height: 270px;
+}
+body .container main .main-top-block .item hr {
+  margin: 7px 0;
+  border: 1px solid white;
+}
+body .container main .main-top-block .top-left-block .top-left-bottom-block {
+  padding: 15px 30px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 400;
+}
+body .container main .main-top-block .top-left-block .top-left-bottom-block .left-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+body .container main .main-top-block .top-left-block .top-left-bottom-block .left-side .weather-img {
+  width: 100px;
+  -webkit-transform: scale(1.5, 1.5);
+          transform: scale(1.5, 1.5);
+}
+body .container main .main-top-block .top-left-block .top-left-bottom-block .right-side .out-date, body .container main .main-top-block .top-left-block .top-left-bottom-block .right-side .out-description {
+  font-weight: 600;
+}
+body .container main .main-top-block .top-left-block .top-left-bottom-block .right-side .out-deg-temp {
+  margin-top: 36px;
+}
+body .container main .main-top-block .top-right-block .right-inner-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 15px 8px 10px;
+  text-align: left;
+}
+body .container main .main-top-block .top-right-block .right-inner-block p {
+  margin: 5px 0;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,19 @@
+@media screen and (max-width: 1120px) {
+    body {
+        overflow: auto;
+    }
+    body .container main .main-top-block .item  {
+        width: 250px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    body .container main .main-top-block .item  {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+@media screen and (max-width: 800px) {
+    body .container {
+        width: 80%;
+    }
+}   
