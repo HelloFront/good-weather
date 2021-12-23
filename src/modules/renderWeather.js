@@ -14,12 +14,12 @@ const renderWeather = (obj) => {
         mainBlock.insertAdjacentHTML('beforeend', `
         <div class="main-top-block">
         <div class="top-left-block item">
-            <p class="out-location">${obj.name}</p>
+            <p class="out-location">${obj.name} ${obj.sys.country}</p>
             <hr>
             <div class="top-left-bottom-block">
                 <div class="left-side">
                     <img class="weather-img" src="img/${obj.weather[0].icon}.svg" alt="weather">
-                    <span class="out-wind">Speed: ${obj.wind.speed} km/h</span>
+                    <span class="out-wind">Speed: ${(obj.wind.speed).toFixed(1)} km/h</span>
                 </div>
                 <div class="right-side">
                     <p class="out-date">${days[day.getDay()]}</p>

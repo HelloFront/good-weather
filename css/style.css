@@ -34,10 +34,10 @@ body .container header .btns {
 }
 body .container header .btns button {
   margin: 0 5px;
-  width: 150px;
-  height: 30px;
+  width: 25%;
+  height: 25px;
   color: #1d1d1d;
-  background-color: rgba(5, 141, 134, 0.452);
+  background-color: rgba(5, 141, 134, 0.24);
   border: 1px solid black;
   border-radius: 3px;
   cursor: pointer;
@@ -47,8 +47,41 @@ body .container header .btns button {
 body .container header .btns button:hover {
   border: 1px solid white;
 }
+body .container header .search-block {
+  width: 70%;
+  margin: 10px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+body .container header .search-block input {
+  width: 70%;
+  outline: none;
+  height: 30px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  text-indent: 7px;
+}
+body .container header .search-block input:focus {
+  border: 1px solid #ff0909;
+}
+body .container header .search-block .accept {
+  margin: 0 5px;
+  width: 30%;
+  height: 30px;
+  color: #1d1d1d;
+  background-color: rgba(8, 255, 243, 0.452);
+  border: 1px solid black;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
 body .container main {
-  margin: 50px 0 0;
+  margin: 10px 0 0;
   width: 100%;
 }
 body .container main .main-top-block {
