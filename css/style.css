@@ -6,15 +6,18 @@
 }
 
 body {
-  overflow: hidden;
+  height: 100%;
+}
+body section {
+  min-height: 100vh;
+  padding: 100px 0;
   font-family: 'Lato', sans-serif;
   color: #fff;
   background: -webkit-gradient(linear, left top, right bottom, from(blue), color-stop(20%), to(#13e7dc));
   background: linear-gradient(to bottom right, blue, 20%, #13e7dc);
   background-repeat: no-repeat;
 }
-body h1 {
-  margin-top: 100px;
+body section h1 {
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
@@ -22,11 +25,11 @@ body h1 {
   border-bottom: 1px solid;
   border-top: 1px solid;
 }
-body .container {
-  width: 50%;
+body section .container {
+  width: 80%;
   margin: 5% auto;
 }
-body .container header .btns {
+body section .container header .btns {
   margin: 20px 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -35,7 +38,7 @@ body .container header .btns {
       -ms-flex-pack: center;
           justify-content: center;
 }
-body .container header .btns button {
+body section .container header .btns button {
   margin: 0 5px;
   width: 25%;
   height: 25px;
@@ -47,10 +50,10 @@ body .container header .btns button {
   -webkit-transition: .3s linear;
   transition: .3s linear;
 }
-body .container header .btns button:hover {
+body section .container header .btns button:hover {
   border: 1px solid white;
 }
-body .container header .search-block {
+body section .container header .search-block {
   width: 70%;
   margin: 10px auto;
   display: -webkit-box;
@@ -60,7 +63,7 @@ body .container header .search-block {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-body .container header .search-block input {
+body section .container header .search-block input {
   width: 70%;
   outline: none;
   height: 30px;
@@ -68,10 +71,10 @@ body .container header .search-block input {
   border-radius: 3px;
   text-indent: 7px;
 }
-body .container header .search-block input:focus {
+body section .container header .search-block input:focus {
   border: 1px solid #ff0909;
 }
-body .container header .search-block .accept {
+body section .container header .search-block .accept {
   margin: 0 5px;
   width: 30%;
   height: 30px;
@@ -83,20 +86,11 @@ body .container header .search-block .accept {
   -webkit-transition: .3s linear;
   transition: .3s linear;
 }
-body .container main {
+body section .container main {
   margin: 10px 0 0;
   width: 100%;
 }
-body .container main .spinner {
-  width: 50%;
-  display: block;
-  margin: 12% auto;
-  padding-bottom: 2000px;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-body .container main .main-top-block {
-  padding-bottom: 100%;
+body section .container main .main-top-block {
   width: 100%;
   min-height: 270px;
   display: -webkit-box;
@@ -114,19 +108,21 @@ body .container main .main-top-block {
   font-weight: 600;
   font-size: 1.1rem;
 }
-body .container main .main-top-block .item {
+body section .container main .main-top-block .item {
+  margin: 10px 10px;
   padding: 20px 15px;
   border: 1px solid #5f5f5f;
   border-radius: 4px;
   background-color: rgba(5, 141, 134, 0.178);
-  width: 45%;
+  width: 47%;
+  min-width: 252px;
   min-height: 250px;
 }
-body .container main .main-top-block .item hr {
+body section .container main .main-top-block .item hr {
   margin: 7px 0;
   border: 1px solid white;
 }
-body .container main .main-top-block .top-left-block .top-left-bottom-block {
+body section .container main .main-top-block .top-left-block .top-left-bottom-block {
   padding: 15px 30px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -139,7 +135,7 @@ body .container main .main-top-block .top-left-block .top-left-bottom-block {
           justify-content: space-between;
   font-weight: 400;
 }
-body .container main .main-top-block .top-left-block .top-left-bottom-block .left-side {
+body section .container main .main-top-block .top-left-block .top-left-bottom-block .left-side {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -148,18 +144,18 @@ body .container main .main-top-block .top-left-block .top-left-bottom-block .lef
       -ms-flex-direction: column;
           flex-direction: column;
 }
-body .container main .main-top-block .top-left-block .top-left-bottom-block .left-side .weather-img {
+body section .container main .main-top-block .top-left-block .top-left-bottom-block .left-side .weather-img {
   width: 100px;
   -webkit-transform: scale(1.5, 1.5);
           transform: scale(1.5, 1.5);
 }
-body .container main .main-top-block .top-left-block .top-left-bottom-block .right-side .out-date, body .container main .main-top-block .top-left-block .top-left-bottom-block .right-side .out-description {
+body section .container main .main-top-block .top-left-block .top-left-bottom-block .right-side .out-date, body section .container main .main-top-block .top-left-block .top-left-bottom-block .right-side .out-description {
   font-weight: 600;
 }
-body .container main .main-top-block .top-left-block .top-left-bottom-block .right-side .out-deg-temp {
+body section .container main .main-top-block .top-left-block .top-left-bottom-block .right-side .out-deg-temp {
   margin-top: 36px;
 }
-body .container main .main-top-block .top-right-block .right-inner-block {
+body section .container main .main-top-block .top-right-block .right-inner-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,7 +167,7 @@ body .container main .main-top-block .top-right-block .right-inner-block {
   padding: 15px 8px 10px;
   text-align: left;
 }
-body .container main .main-top-block .top-right-block .right-inner-block p {
+body section .container main .main-top-block .top-right-block .right-inner-block p {
   margin: 5px 0;
   font-weight: 400;
 }

@@ -1,31 +1,13 @@
-@media screen and (max-width: 1120px) {
-    body h1 {
-        margin-top: 30px;
-    }
-    body .container main .main-top-block .item  {
-        width: 250px;
-    }
-}
-@media screen and (max-width: 1000px) {
-    body {
-        overflow: auto;
-    }
-    body .container main .spinner {
-        margin-top: 50%;
-    }
-    body .container main .main-top-block {
-        padding-bottom: 20%;
-    }
-    body .container main .main-top-block .item  {
-        width: 100%;
-        margin: 10px 0;
-    }
-}
-@media screen and (max-width: 800px) {
-    body .container {
+@media screen and (max-width: 1100px) {
+    body section .container main  .main-top-block .item  {
         width: 80%;
     }
-    body .container main .main-top-block {
-        padding-bottom: 40%;
+}
+@media screen and (max-width: 700px) {
+    body section .container main .main-top-block .item {
+        width: 100%;
+    }
+    body section .container main .main-top-block .top-left-block .top-left-bottom-block .left-side .weather-img {
+        transform: scale(1.9, 1.9);
     }
 }   
