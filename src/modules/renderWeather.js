@@ -9,7 +9,7 @@ const renderWeather = (obj) => {
         })
     } else {
         render(obj);
-        renderDaily(obj);
+        daylyWeather(obj).then(json => renderDaily(json));
     }
 
     function render (obj) {
@@ -60,15 +60,12 @@ const renderWeather = (obj) => {
     }   
 
     function renderDaily (obj) {
-        console.log(obj);
         const day = new Date();
         const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         const outWeather = document.querySelector('.section-dayly-weather > .container');
         outWeather.innerHTML = '';
 
         obj.daily.forEach((element,index) => {
-            console.log(day);
-            console.log(element.temp.day);
             outWeather.insertAdjacentHTML('beforeend', ` 
             <div class="dayly-weather">
             <p class="day">${days[day.getDay() + index]}</p>
