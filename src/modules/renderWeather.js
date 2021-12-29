@@ -7,7 +7,10 @@ const renderWeather = (obj) => {
             render(data);
             daylyWeather(data).then(json => renderDaily(json));
         })
-    } else render(obj)
+    } else {
+        render(obj);
+        renderDaily(obj);
+    }
 
     function render (obj) {
         const day = new Date();
