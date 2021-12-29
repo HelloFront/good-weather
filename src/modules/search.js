@@ -1,3 +1,4 @@
+import daylyWeather from "./daylyWeather";
 import getData from "./getData";
 import renderWeather from "./renderWeather";
 
@@ -9,7 +10,10 @@ const search = () => {
         if(input.value && e.key === 'Enter') {
             let value = input.value;
             input.value = '';
-            getData(value).then(json => renderWeather(json))
+            getData(value).then(json => {
+                renderWeather(json);
+                daylyWeather(json);
+            })
         }
     })
 
@@ -17,7 +21,10 @@ const search = () => {
         let value = input.value;
         input.value = '';
 
-        if(value) getData(value).then(json => renderWeather(json))
+        if(value) getData(value).then(json => {
+            renderWeather(json);
+            daylyWeather(json);
+        })
     })
 }
 

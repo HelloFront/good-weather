@@ -1,3 +1,4 @@
+import daylyWeather from "./daylyWeather";
 import getData from "./getData";
 import renderWeather from "./renderWeather";
 
@@ -7,7 +8,8 @@ const eventBtn = () => {
     allBtns.forEach(item => item.addEventListener('click', (e) => {
         let sity = e.target.innerText
         getData(sity).then(json => {
-            renderWeather(json)
+            renderWeather(json);
+            daylyWeather(json);
         })
     }))
 }

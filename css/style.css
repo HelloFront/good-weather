@@ -8,7 +8,7 @@
 body {
   height: 100%;
 }
-body section {
+body .section-main {
   min-height: 100vh;
   padding: 100px 0;
   font-family: 'Lato', sans-serif;
@@ -17,7 +17,7 @@ body section {
   background: linear-gradient(to bottom right, blue, 20%, #13e7dc);
   background-repeat: no-repeat;
 }
-body section h1 {
+body .section-main h1 {
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
@@ -25,11 +25,12 @@ body section h1 {
   border-bottom: 1px solid;
   border-top: 1px solid;
 }
-body section .container {
+body .section-main .container {
   width: 80%;
   margin: 5% auto;
+  margin-bottom: 0;
 }
-body section .container header .btns {
+body .section-main .container header .btns {
   margin: 20px 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -38,7 +39,7 @@ body section .container header .btns {
       -ms-flex-pack: center;
           justify-content: center;
 }
-body section .container header .btns button {
+body .section-main .container header .btns button {
   margin: 0 5px;
   width: 25%;
   height: 25px;
@@ -50,10 +51,10 @@ body section .container header .btns button {
   -webkit-transition: .3s linear;
   transition: .3s linear;
 }
-body section .container header .btns button:hover {
+body .section-main .container header .btns button:hover {
   border: 1px solid white;
 }
-body section .container header .search-block {
+body .section-main .container header .search-block {
   width: 70%;
   margin: 10px auto;
   display: -webkit-box;
@@ -63,7 +64,7 @@ body section .container header .search-block {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-body section .container header .search-block input {
+body .section-main .container header .search-block input {
   width: 70%;
   outline: none;
   height: 30px;
@@ -71,10 +72,10 @@ body section .container header .search-block input {
   border-radius: 3px;
   text-indent: 7px;
 }
-body section .container header .search-block input:focus {
+body .section-main .container header .search-block input:focus {
   border: 1px solid #ff0909;
 }
-body section .container header .search-block .accept {
+body .section-main .container header .search-block .accept {
   margin: 0 5px;
   width: 30%;
   height: 30px;
@@ -86,11 +87,11 @@ body section .container header .search-block .accept {
   -webkit-transition: .3s linear;
   transition: .3s linear;
 }
-body section .container main {
+body .section-main .container main {
   margin: 10px 0 0;
   width: 100%;
 }
-body section .container main .main-top-block {
+body .section-main .container main .main-top-block {
   width: 100%;
   min-height: 270px;
   display: -webkit-box;
@@ -98,9 +99,9 @@ body section .container main .main-top-block {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -108,8 +109,8 @@ body section .container main .main-top-block {
   font-weight: 600;
   font-size: 1.1rem;
 }
-body section .container main .main-top-block .item {
-  margin: 10px 10px;
+body .section-main .container main .main-top-block .item {
+  margin: 10px 0;
   padding: 20px 15px;
   border: 1px solid #5f5f5f;
   border-radius: 4px;
@@ -118,11 +119,11 @@ body section .container main .main-top-block .item {
   min-width: 252px;
   min-height: 250px;
 }
-body section .container main .main-top-block .item hr {
+body .section-main .container main .main-top-block .item hr {
   margin: 7px 0;
   border: 1px solid white;
 }
-body section .container main .main-top-block .top-left-block .top-left-bottom-block {
+body .section-main .container main .main-top-block .top-left-block .top-left-bottom-block {
   padding: 15px 30px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -135,7 +136,7 @@ body section .container main .main-top-block .top-left-block .top-left-bottom-bl
           justify-content: space-between;
   font-weight: 400;
 }
-body section .container main .main-top-block .top-left-block .top-left-bottom-block .left-side {
+body .section-main .container main .main-top-block .top-left-block .top-left-bottom-block .left-side {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,18 +145,18 @@ body section .container main .main-top-block .top-left-block .top-left-bottom-bl
       -ms-flex-direction: column;
           flex-direction: column;
 }
-body section .container main .main-top-block .top-left-block .top-left-bottom-block .left-side .weather-img {
+body .section-main .container main .main-top-block .top-left-block .top-left-bottom-block .left-side .weather-img {
   width: 100px;
   -webkit-transform: scale(1.5, 1.5);
           transform: scale(1.5, 1.5);
 }
-body section .container main .main-top-block .top-left-block .top-left-bottom-block .right-side .out-date, body section .container main .main-top-block .top-left-block .top-left-bottom-block .right-side .out-description {
+body .section-main .container main .main-top-block .top-left-block .top-left-bottom-block .right-side .out-date, body .section-main .container main .main-top-block .top-left-block .top-left-bottom-block .right-side .out-description {
   font-weight: 600;
 }
-body section .container main .main-top-block .top-left-block .top-left-bottom-block .right-side .out-deg-temp {
+body .section-main .container main .main-top-block .top-left-block .top-left-bottom-block .right-side .out-deg-temp {
   margin-top: 36px;
 }
-body section .container main .main-top-block .top-right-block .right-inner-block {
+body .section-main .container main .main-top-block .top-right-block .right-inner-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -167,9 +168,58 @@ body section .container main .main-top-block .top-right-block .right-inner-block
   padding: 15px 8px 10px;
   text-align: left;
 }
-body section .container main .main-top-block .top-right-block .right-inner-block p {
+body .section-main .container main .main-top-block .top-right-block .right-inner-block p {
   margin: 5px 0;
   font-weight: 400;
+}
+body .section-main .section-dayly-weather {
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+body .section-main .section-dayly-weather .container {
+  overflow: scroll;
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+body .section-main .section-dayly-weather .container .dayly-weather {
+  margin-right: 10px;
+  padding: 20px 15px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background-color: rgba(78, 255, 246, 0.51);
+  width: 100%;
+  min-width: 110px;
+}
+body .section-main .section-dayly-weather .container .dayly-weather .icon-weather {
+  -webkit-transform: scale(1.5, 1.5);
+          transform: scale(1.5, 1.5);
+}
+body .section-main .section-dayly-weather .container .dayly-weather .temp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .section-main .section-dayly-weather .container .dayly-weather .temp p {
+  text-align: center;
+  margin: 5px 0;
+}
+body .section-main .section-dayly-weather .container .dayly-weather .temp svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  fill: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

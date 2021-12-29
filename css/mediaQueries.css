@@ -1,13 +1,16 @@
 @media screen and (max-width: 1100px) {
-    body section .container main  .main-top-block .item  {
-        width: 80%;
+    body .section-main .container main  .main-top-block  {
+        justify-content: center;
+    }
+    body .section-main .container main  .main-top-block .item  {
+        width: 100%;
     }
 }
 @media screen and (max-width: 700px) {
-    body section .container main .main-top-block .item {
+    body .section-main .container main .main-top-block .item {
         width: 100%;
     }
-    body section .container main .main-top-block .top-left-block .top-left-bottom-block .left-side .weather-img {
+    body .section-main .container main .main-top-block .top-left-block .top-left-bottom-block .left-side .weather-img {
         transform: scale(1.9, 1.9);
     }
 }   
