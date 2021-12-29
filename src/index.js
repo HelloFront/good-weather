@@ -3,5 +3,5 @@ import renderWeather from "./modules/renderWeather";
 import search from "./modules/search";
 
 renderWeather()
-eventBtn()
+// eventBtn()
 search()
