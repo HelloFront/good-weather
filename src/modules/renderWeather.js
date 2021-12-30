@@ -1,18 +1,23 @@
 import daylyWeather from "./daylyWeather";
 import getData from "./getData";
+import search from "./search";
 
 export const renderWeather = (obj) => {
     if(!obj) {
         getData().then(data => {
-            render(data);
-            daylyWeather(data).then(json => renderDaily(json));
+            if(data) {
+                render(data);
+                daylyWeather(data).then(json => renderDaily(json));
+            }
         })
     } else {
         render(obj);
-        daylyWeather(data).then(json => renderDaily(json));
+        daylyWeather(obj).then(json => renderDaily(json));
     }
 }
 export function render (obj) {
+    if(!obj) return;
+
     const day = new Date();
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const mainBlock = document.querySelector('main');
@@ -80,6 +85,30 @@ export function renderDaily (obj) {
         </div>
     </div>`)
     });
+}
+
+export function renderMemorySearch () {
+    const rememberSearch = document.querySelector('.rememberSearch');
+    const storage = JSON.parse(localStorage.getItem('search'));
+
+    rememberSearch.innerHTML = ''
+    storage.forEach(item => {
+        rememberSearch.insertAdjacentHTML('beforeend', `
+        <div class="item" data-sity="${item.name}">
+            <div class="left">
+                <p class="sity">${item.name}</p>
+                <p class="country">${item.sys.country}</p>
+            </div>
+            <div class="right">
+                <img src="img/${item.weather[0].icon}.svg" alt="icon">
+                <div class="temp">${(item.main.temp - 273.15).toFixed(1)}&deg;</div>
+            </div>
+            <hr>
+        </div>`)
+    });
+
+    const rememberItems = document.querySelectorAll('.rememberSearch > .item');
+    search(Array.from(rememberItems))
 }
 
 

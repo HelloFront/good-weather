@@ -7,7 +7,7 @@
     }
 }
 @media screen and (max-width: 700px) {
-    body .section-main .nav .container .search-block {
+    body .section-main .nav .container .nav-inner-block {
         width: 50%;
     }
     body .section-main .container main .main-top-block .item {
@@ -17,3 +17,21 @@
         transform: scale(1.9, 1.9);
     }
 }   
+@media screen and (max-width: 420px) {
+    body .section-main .nav .container .nav-inner-block .rememberSearch {
+        top: 25px;
+        margin: 0 auto;
+    }
+    body .section-main .nav .container .nav-inner-block .rememberSearch .item hr{
+        top: 0;
+    }
+    body .section-main .nav .container .nav-inner-block {
+        width: 50%;
+    }
+    body .section-main .container main .main-top-block .item {
+        width: 100%;
+    }
+    body .section-main .container main .main-top-block .top-left-block .top-left-bottom-block .left-side .weather-img {
+        transform: scale(1.9, 1.9);
+    }
+} 
