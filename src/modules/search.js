@@ -1,6 +1,6 @@
 import daylyWeather from "./daylyWeather";
 import getData from "./getData";
-import renderWeather from "./renderWeather";
+import {renderWeather, render, renderDaily} from "./renderWeather";
 
 const search = () => {
     const input = document.querySelector('.search-block input');
