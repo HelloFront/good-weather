@@ -53,7 +53,7 @@ export function render (obj) {
                 <p>Pressure . . . </p>
             </div>
             <div class="right-side">
-                <p class="out-wind-speed">${obj.wind.speed} km/h</p>
+                <p class="out-wind-speed">${obj.wind.speed} m/s</p>
                 <p class="out-temperature">${(obj.main.temp - 273.15).toFixed(1)}&deg;C</p>
                 <p class="out-feels-like">${(obj.main.feels_like - 273.15).toFixed(1)}&deg;C</p>
                 <p class="out-clouds-cover">${obj.clouds.all}%</p>
