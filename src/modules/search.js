@@ -2,7 +2,7 @@ import daylyWeather from "./daylyWeather";
 import getData from "./getData";
 import {renderWeather, render, renderDaily, renderMemorySearch} from "./renderWeather";
 
-const search = (arr) => {
+const search = () => {
     const rememberSearch = document.querySelector('.rememberSearch');
     const input = document.querySelector('.search-block input');
     const btn = document.querySelector('.accept');
@@ -10,15 +10,23 @@ const search = (arr) => {
     input.addEventListener('focus', () => {
         if(localStorage.length !== 0) {
             renderMemorySearch()
-            rememberSearch.style.display = 'block'
+            rememberSearch.style.display = 'block';
         }
+        setTimeout(() => {
+            const memorySearch = document.querySelectorAll('.rememberSearch > .item');
+            if(memorySearch) {
+                memorySearch.forEach(item => {
+                    item.addEventListener('click', getWeather)
+                });
+            }
+        }, 500);
     })
 
-    if(arr) {
-        arr.forEach(item => {
-            item.addEventListener('click', getWeather)
-        });
-    }
+    input.addEventListener('blur', () => {
+        setTimeout(() => {
+            rememberSearch.style.display = 'none'
+        }, 200);
+    })
 
     document.body.addEventListener('keydown', (e) => {
         if(input.value && e.key === 'Enter') {
@@ -53,15 +61,13 @@ const search = (arr) => {
         let storage = [];
         let status = true;
         if(localStorage.length === 0) {
-            storage.push(obj);
+            storage.push(obj.name.toLowerCase());
             localStorage.setItem('search', JSON.stringify(storage));
-        }else {
+        } else {
             storage = JSON.parse(localStorage.getItem('search'));
-            storage.forEach(item => {
-                if(item.name === obj.name) status = false;
-            });
+            if(storage.includes(obj.name.toLowerCase())) status = false;
             if(status) {
-                storage.push(obj);
+                storage.push(obj.name.toLowerCase());
                 localStorage.setItem('search', JSON.stringify(storage));
             }
         }

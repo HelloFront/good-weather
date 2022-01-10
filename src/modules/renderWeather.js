@@ -93,22 +93,21 @@ export function renderMemorySearch () {
 
     rememberSearch.innerHTML = ''
     storage.forEach(item => {
-        rememberSearch.insertAdjacentHTML('beforeend', `
-        <div class="item" data-sity="${item.name}">
-            <div class="left">
-                <p class="sity">${item.name}</p>
-                <p class="country">${item.sys.country}</p>
-            </div>
-            <div class="right">
-                <img src="img/${item.weather[0].icon}.svg" alt="icon">
-                <div class="temp">${(item.main.temp - 273.15).toFixed(1)}&deg;</div>
-            </div>
-            <hr>
-        </div>`)
+        getData(item).then(json => {
+            rememberSearch.insertAdjacentHTML('beforeend', `
+            <div class="item" data-sity="${json.name}">
+                <div class="left">
+                    <p class="sity">${json.name}</p>
+                    <p class="country">${json.sys.country}</p>
+                </div>
+                <div class="right">
+                    <img src="img/${json.weather[0].icon}.svg" alt="icon">
+                    <div class="temp">${(json.main.temp - 273.15).toFixed(1)}&deg;</div>
+                </div>
+                <hr>
+            </div>`)
+        })
     });
-
-    const rememberItems = document.querySelectorAll('.rememberSearch > .item');
-    search(Array.from(rememberItems))
 }
 
 
